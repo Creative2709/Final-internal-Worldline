@@ -2,24 +2,14 @@ package final_internal.final_internal;
 
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import junit.framework.Assert;
-
-import static org.testng.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
 
@@ -29,36 +19,30 @@ public class AmazonTest {
 
     @BeforeMethod
     public void setUp() {
-        // Set the path to the ChromeDriver executable
    	 System.setProperty("webdriver.chrome.driver", "D:\\WORLDLINE\\Testing\\chromedriver_win32\\chromedriver.exe");
 
-        // Create a new instance of the ChromeDriver
         driver = new ChromeDriver();
 
-        // Maximize the browser window
         driver.manage().window().maximize();
 
-        // Set implicit wait time
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @Test
     public void testECommerceActivities() throws InterruptedException {
-//        performActivity("open_browser");
-//        performActivity("register_and_signup");
+        performActivity("open_browser");
+        performActivity("register_and_signup");
         performActivity("login");
-//        performActivity("add_to_cart");
+        performActivity("add_to_cart");
         performActivity("checkout");
         performActivity("logout");
     }
 
     @AfterMethod
     public void tearDown() {
-        // Close the browser
-        //driver.quit();
+        driver.quit();
     }
 
-    // Method to execute keywords
     @SuppressWarnings("deprecation")
 	private void performActivity(String keyword) throws InterruptedException {
    	 
@@ -68,7 +52,6 @@ public class AmazonTest {
                 driver.get("https://www.amazon.in/ap/register?_encoding=UTF8&openid.assoc_handle=inflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_newcust");               
                 break;
             case "register_and_signup":
-                // Implement registration and signup logic
             	driver.findElement(By.id("ap_customer_name")).sendKeys("Swapnil Jadhav");
             	driver.findElement(By.id("ap_phone_number")).sendKeys("9112699066");
             	driver.findElement(By.id("ap_password")).sendKeys("Swap@123");
@@ -77,21 +60,18 @@ public class AmazonTest {
             	
                 break;
             case "login":
-                // Implement login logic
             	driver.get("https://www.amazon.in/ap/signin/ref=ap_register_mobile_claim_conflict_warned_back_to_signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_newcust&prevRID=QQTADGD1J6BR1PHKMNC2&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=inflex&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
             	driver.findElement(By.name("email")).sendKeys("jadhavswapnil2709@gmail.com");
             	driver.findElement(By.id("continue")).click();
             	
                 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-            	    // Enter password and click "Sign In"
-            	driver.findElement(By.name("password")).sendKeys("Sw@pn!l_2709");
+            	driver.findElement(By.name("password")).sendKeys("Test@123");
             	    driver.findElement(By.id("signInSubmit")).click();       	    
             	Thread.sleep(10000);
             	
             	break;
             case "add_to_cart":
-                // Implement adding product to cart logic
             	driver.get("https://www.amazon.in/ref=nav_logo");
             	driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("keyboard");
             	driver.findElement(By.id("nav-search-submit-button")).click();

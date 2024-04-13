@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-13T18:51:28 IST" name="Default suite" finished-at="2024-04-13T18:52:17 IST" duration-ms="49133">
+  <suite started-at="2024-04-13T19:01:24 IST" name="Default suite" finished-at="2024-04-13T19:03:01 IST" duration-ms="97145">
     <groups>
     </groups>
-    <test started-at="2024-04-13T18:51:28 IST" name="Default test" finished-at="2024-04-13T18:52:17 IST" duration-ms="49133">
+    <test started-at="2024-04-13T19:01:24 IST" name="Default test" finished-at="2024-04-13T19:03:01 IST" duration-ms="97145">
       <class name="final_internal.final_internal.AmazonTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:final_internal.final_internal.AmazonTest@29215f06]" started-at="2024-04-13T18:51:28 IST" name="setUp" finished-at="2024-04-13T18:51:36 IST" duration-ms="7564" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:final_internal.final_internal.AmazonTest@29215f06]" started-at="2024-04-13T19:01:24 IST" name="setUp" finished-at="2024-04-13T19:01:31 IST" duration-ms="6634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testECommerceActivities()[pri:0, instance:final_internal.final_internal.AmazonTest@29215f06]" started-at="2024-04-13T18:51:36 IST" name="testECommerceActivities" finished-at="2024-04-13T18:52:17 IST" duration-ms="41387" status="PASS">
+        <test-method signature="testECommerceActivities()[pri:0, instance:final_internal.final_internal.AmazonTest@29215f06]" started-at="2024-04-13T19:01:31 IST" name="testECommerceActivities" finished-at="2024-04-13T19:03:00 IST" duration-ms="89392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testECommerceActivities -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:final_internal.final_internal.AmazonTest@29215f06]" started-at="2024-04-13T18:52:17 IST" name="tearDown" finished-at="2024-04-13T18:52:17 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:final_internal.final_internal.AmazonTest@29215f06]" started-at="2024-04-13T19:03:00 IST" name="tearDown" finished-at="2024-04-13T19:03:01 IST" duration-ms="936" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
